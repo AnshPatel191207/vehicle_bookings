@@ -2,28 +2,19 @@
   <img src="https://capsule-render.vercel.app/api?type=waving&height=270&color=0:0B1020,100:182031,50:B7F34D&section=header&text=RideOps&fontSize=68&fontColor=FFFFFF&fontAlignY=37&descAlignY=61&descSize=17&descColor=D1D5DB&animation=fadeIn" alt="RideOps Banner" width="100%">
 </p>
 
-A high-performance, production-grade full-stack platform for managing, analyzing, and visualizing ride-hailing vehicle booking data. Designed around a real-world dataset of **18,289 vehicle booking records** from Bangalore, India, **RideOps** integrates a robust RESTful API backend with a state-of-the-art interactive administration dashboard.
+> A high-performance, production-grade full-stack platform for managing, analyzing, and visualizing ride-hailing vehicle booking data. Designed around a real-world dataset of **18,289 vehicle booking records** from Bangalore, India, **RideOps** integrates a robust RESTful API backend with a state-of-the-art interactive administration dashboard.
 
 ---
 
-### 🔗 Project Links
-<!-- *   🎨 **Figma Design Link:** *N/A (Interface styled custom-crafted in code)* -->
-*   🌐 **Live Deployed Project:** [vehicle-bookings.vercel.app](https://vehicle-bookings.vercel.app/)
-*   ⚡ **Backend Deployed Link:** [vehicle-bookings.onrender.com](https://vehicle-bookings.onrender.com)
-*   📖 **Postman Documentation:** [Postman Workspace](https://documenter.getpostman.com/view/50841281/2sBXwmRDbN)
-<!-- *   🎥 **YouTube Demo Link:** *N/A* -->
+<br/>
 
----
+<div align="center">
 
-<p align="center">
-  <img src="https://img.shields.io/badge/Vite-v8-646CFF?logo=vite&logoColor=white" alt="Vite">
-  <img src="https://img.shields.io/badge/React-v19-61DAFB?logo=react&logoColor=black" alt="React">
-  <img src="https://img.shields.io/badge/Redux%20Toolkit-v2-764ABC?logo=redux&logoColor=white" alt="Redux">
-  <img src="https://img.shields.io/badge/Node.js-v18+-339933?logo=node.js&logoColor=white" alt="Node.js">
-  <img src="https://img.shields.io/badge/Express-v5-000000?logo=express&logoColor=white" alt="Express">
-  <img src="https://img.shields.io/badge/MongoDB-Atlas-47A248?logo=mongodb&logoColor=white" alt="MongoDB">
-  <!-- <img src="https://img.shields.io/badge/License-ISC-blue.svg" alt="License"> -->
-</p>
+[![Frontend](https://img.shields.io/badge/Frontend-Live%20Demo-000000?style=for-the-badge&logo=vercel&logoColor=white)](https://vehicle-bookings.vercel.app/)
+[![Backend](https://img.shields.io/badge/Backend-API-5C2D91?style=for-the-badge&logo=render&logoColor=white)](https://vehicle-bookings.onrender.com/)
+[![Postman](https://img.shields.io/badge/Postman-API%20Docs-FF6C37?style=for-the-badge&logo=postman&logoColor=white)](https://documenter.getpostman.com/view/50841281/2sBXwmRDbN)
+
+</div>
 
 ---
 
@@ -174,81 +165,6 @@ graph TD
     API --> |Services Layer| Services[Auth, Booking, Stats, Search Services]
     Services --> |Aggregation / Query Pipelines| DB
 ```
-
----
-
-## 🚀 Getting Started
-
-### Prerequisites
-*   **Node.js** (v18 or higher)
-*   **MongoDB** (running locally or MongoDB Atlas connection URI)
-
-### 1. Backend Setup
-
-First, navigate to the `Backend` directory and configure the API:
-
-```bash
-cd Backend
-npm install
-```
-
-Copy the environment variables template and configure it:
-
-```bash
-cp .env.example .env
-```
-
-Open `.env` and fill in the required fields:
-```env
-PORT=5000
-MONGO_URI=mongodb://localhost:27017/vehicle_bookings
-JWT_SECRET=your_super_secret_jwt_key_here
-NODE_ENV=development
-```
-
-Next, seed your MongoDB database with the real-world dataset (18,289 records):
-
-```bash
-npm run seed
-```
-
-Run the automated test suite to ensure the backend is fully operational:
-
-```bash
-npm test
-```
-
-Start the API server in development mode:
-
-```bash
-npm run dev
-```
-
-The API will now be listening at `http://localhost:5000`.
-
----
-
-### 2. Frontend Setup
-
-Open a new terminal window, navigate to the `Frontend` directory, and install dependencies:
-
-```bash
-cd Frontend
-npm install
-```
-
-Create a `.env` file in the `Frontend/` folder using the `.env.example` file:
-```env
-VITE_API_URL=http://localhost:5000/api/v1
-```
-
-Launch the Vite development server:
-
-```bash
-npm run dev
-```
-
-The client will be running at `http://localhost:5173`. Open this URL in your browser to interact with the RideOps Fleet Console!
 
 ---
 
