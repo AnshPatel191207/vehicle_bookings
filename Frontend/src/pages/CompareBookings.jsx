@@ -68,7 +68,10 @@ export default function CompareBookings() {
 
   return (
     <>
-      <Helmet><title>Booking Comparison</title></Helmet>
+      <Helmet>
+        <title>Booking Comparison</title>
+        <meta name="description" content="Inspect and crosscheck routes, operational metrics, and revenue signals of two separate ride-hailing bookings side-by-side on RideOps." />
+      </Helmet>
       <PageHeader
         eyebrow="INTELLIGENCE / COMPARE"
         title="Ride comparative workspace"

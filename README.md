@@ -1,6 +1,17 @@
-# 🚗 RideOps: Premium Full-Stack Fleet Management System
+<p align="center">
+  <img src="https://capsule-render.vercel.app/api?type=waving&height=270&color=0:0B1020,100:182031,50:B7F34D&section=header&text=RideOps&fontSize=68&fontColor=FFFFFF&fontAlignY=37&descAlignY=61&descSize=17&descColor=D1D5DB&animation=fadeIn" alt="RideOps Banner" width="100%">
+</p>
 
 A high-performance, production-grade full-stack platform for managing, analyzing, and visualizing ride-hailing vehicle booking data. Designed around a real-world dataset of **18,289 vehicle booking records** from Bangalore, India, **RideOps** integrates a robust RESTful API backend with a state-of-the-art interactive administration dashboard.
+
+---
+
+### 🔗 Project Links
+<!-- *   🎨 **Figma Design Link:** *N/A (Interface styled custom-crafted in code)* -->
+*   🌐 **Live Deployed Project:** [vehicle-bookings.vercel.app](https://vehicle-bookings.vercel.app/)
+*   ⚡ **Backend Deployed Link:** [vehicle-bookings.onrender.com](https://vehicle-bookings.onrender.com)
+*   📖 **Postman Documentation:** [Postman Workspace](https://documenter.getpostman.com/view/50841281/2sBXwmRDbN)
+<!-- *   🎥 **YouTube Demo Link:** *N/A* -->
 
 ---
 
@@ -11,23 +22,22 @@ A high-performance, production-grade full-stack platform for managing, analyzing
   <img src="https://img.shields.io/badge/Node.js-v18+-339933?logo=node.js&logoColor=white" alt="Node.js">
   <img src="https://img.shields.io/badge/Express-v5-000000?logo=express&logoColor=white" alt="Express">
   <img src="https://img.shields.io/badge/MongoDB-Atlas-47A248?logo=mongodb&logoColor=white" alt="MongoDB">
-  <img src="https://img.shields.io/badge/License-ISC-blue.svg" alt="License">
+  <!-- <img src="https://img.shields.io/badge/License-ISC-blue.svg" alt="License"> -->
 </p>
 
 ---
 
 ## 📋 Table of Contents
 
-- [🌌 System Architecture](#-system-architecture)
+- [🔗 Project Links](#-project-links)
+- [📝 Problem Statement](#-problem-statement)
+- [💡 Solution Overview](#-solution-overview)
 - [✨ Key Features](#-key-features)
-  - [Frontend Console (Client)](#frontend-console-client)
-  - [Backend REST API (Server)](#backend-rest-api-server)
 - [🛠️ Tech Stack](#-tech-stack)
 - [📁 Project Structure](#-project-structure)
+- [📸 Project Screenshots](#-project-screenshots)
+- [🌌 System Architecture](#-system-architecture)
 - [🚀 Getting Started](#-getting-started)
-  - [Prerequisites](#prerequisites)
-  - [1. Backend Setup](#1-backend-setup)
-  - [2. Frontend Setup](#2-frontend-setup)
 - [📊 Dataset Information](#-dataset-information)
 - [🔒 Security & Middleware](#-security--middleware)
 - [⚡ Scripts & Command Reference](#-scripts--command-reference)
@@ -35,20 +45,23 @@ A high-performance, production-grade full-stack platform for managing, analyzing
 
 ---
 
-## 🌌 System Architecture
+## 📝 Problem Statement
 
-RideOps is built with a modern decoupled architecture:
-1. **Frontend Console (Vite + React 19 + Redux Toolkit)**: A responsive Single Page Application (SPA) utilizing lazy loading, component-driven layouts, and a centralized store for state.
-2. **Backend API (Node.js + Express 5 + MongoDB/Mongoose)**: A structured REST API utilizing the **MVC + Service Layer** pattern. Services encapsulate business logic and database queries, controllers handle request-response cycles, and middlewares manage security, logging, and validations.
+Modern ride-hailing services generate massive volumes of transactional data daily. Operations administrators and fleet managers struggle to efficiently parse, audit, and extract actionable business intelligence from hundreds of thousands of raw, unstructured booking files. The lack of a unified dashboard leads to major bottlenecks, including:
+1. **Inefficient Data Parsing:** Difficulty in searching, sorting, and filtering records over a large real-world dataset (such as 18k+ records).
+2. **State & Analytics Disconnect:** Minimal visibility into key operational metrics like total revenue, ride success rate, and active ride distributions.
+3. **Audit Complexity:** No visual tool to inspect specific booking records or compare multiple bookings side-by-side to identify anomalies.
+4. **Lack of Role-Based Security:** Unrestricted data access exposes sensitive logistics coordinates to unauthorized personnel.
 
-```mermaid
-graph TD
-    User([User Browser]) <--> |React Router / Redux| Client[Frontend App: Vite + React]
-    Client <--> |HTTPS / JWT Auth| API[Express API Server]
-    API <--> |Mongoose ODM| DB[(MongoDB Atlas Database)]
-    API --> |Services Layer| Services[Auth, Booking, Stats, Search Services]
-    Services --> |Aggregation / Query Pipelines| DB
-```
+---
+
+## 💡 Solution Overview
+
+**RideOps** solves these challenges by bridging the gap between raw data aggregation and operational intelligence. It provides a production-grade, full-stack fleet console built with **React 19** and **Node.js (Express 5)**, featuring:
+*   **High-Throughput Analytics:** Instantly aggregates 18,289 raw bookings into interactive, responsive KPI components.
+*   **Cursor-Based Pagination Engine:** Enables extremely fast search, filter, and page traversal speeds.
+*   **Admin-Only Auditing Controls:** Provides specialized interfaces to inspect individual details, modify entries, compare bookings, and manage user roles.
+*   **Decoupled & Secured Architecture:** Utilizes robust JWT auth with role-based restrictions (RBAC) to ensure only authorized admins can perform mutative actions.
 
 ---
 
@@ -111,6 +124,7 @@ Vehicle_Bookings/
 │
 ├── Frontend/
 │   ├── public/            # Static assets
+│   │   └── Screenshots/   # Operational dashboard screenshots
 │   ├── src/
 │   │   ├── components/    # Reusable UI elements & layouts
 │   │   ├── hooks/         # Custom React hooks
@@ -125,6 +139,40 @@ Vehicle_Bookings/
 │   └── package.json       # Client configurations & dependencies
 │
 └── README.md              # Documentation Mainframe
+```
+
+---
+
+## 📸 Project Screenshots
+
+| Page / Component | Preview |
+| :--- | :--- |
+| **01. Login Portal** | ![Login Portal](Frontend/public/Screenshots/01_login_page.png) |
+| **02. User Registration** | ![User Registration](Frontend/public/Screenshots/02_register_page.png) |
+| **03. Main KPI Dashboard** | ![Main KPI Dashboard](Frontend/public/Screenshots/03_dashboard_kpis.png) |
+| **04. Rich Analytics & Charts** | ![Rich Analytics & Charts](Frontend/public/Screenshots/04_analytics_charts.png) |
+| **05. Advanced Bookings Directory** | ![Advanced Bookings Directory](Frontend/public/Screenshots/05_bookings_directory.png) |
+| **06. Detailed Booking Audit** | ![Detailed Booking Audit](Frontend/public/Screenshots/06_booking_details.png) |
+| **07. Booking Creator / Editor** | ![Booking Creator / Editor](Frontend/public/Screenshots/07_create_booking.png) |
+| **08. Side-by-Side Comparison** | ![Side-by-Side Comparison](Frontend/public/Screenshots/08_compare_bookings.png) |
+| **09. Customers Overview** | ![Customers Overview](Frontend/public/Screenshots/09_customers_list.png) |
+| **10. Administrative User Management** | ![Administrative User Management](Frontend/public/Screenshots/10_user_management.png) |
+
+---
+
+## 🌌 System Architecture
+
+RideOps is built with a modern decoupled architecture:
+1. **Frontend Console (Vite + React 19 + Redux Toolkit)**: A responsive Single Page Application (SPA) utilizing lazy loading, component-driven layouts, and a centralized store for state.
+2. **Backend API (Node.js + Express 5 + MongoDB/Mongoose)**: A structured REST API utilizing the **MVC + Service Layer** pattern. Services encapsulate business logic and database queries, controllers handle request-response cycles, and middlewares manage security, logging, and validations.
+
+```mermaid
+graph TD
+    User([User Browser]) <--> |React Router / Redux| Client[Frontend App: Vite + React]
+    Client <--> |HTTPS / JWT Auth| API[Express API Server]
+    API <--> |Mongoose ODM| DB[(MongoDB Atlas Database)]
+    API --> |Services Layer| Services[Auth, Booking, Stats, Search Services]
+    Services --> |Aggregation / Query Pipelines| DB
 ```
 
 ---
@@ -259,7 +307,7 @@ RideOps implements industry-standard safety practices at every API boundary:
 
 ## 📖 API Reference & Postman
 
-A comprehensive list of the **117+ backend routes** can be found in the [Backend README.md](file:///d:/Vehicle_Bookings/Backend/README.md) file. 
+A comprehensive list of the **117+ backend routes** can be found in the [Backend README.md](Backend/README.md) file. 
 
 For interactive API testing, you can import the preconfigured **Postman Workspace**:
 👉 **[Postman Documentation Link](https://documenter.getpostman.com/view/50841281/2sBXwmRDbN)**

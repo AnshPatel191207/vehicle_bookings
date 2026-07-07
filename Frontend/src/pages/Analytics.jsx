@@ -67,7 +67,10 @@ export default function Analytics() {
 
   return (
     <>
-      <Helmet><title>Performance Intelligence</title></Helmet>
+      <Helmet>
+        <title>Performance Intelligence</title>
+        <meta name="description" content="Deep business intelligence analytics for RideOps fleet performance, displaying charts for payments, booking values, and driver ratings." />
+      </Helmet>
       <PageHeader
         eyebrow="INTELLIGENCE / NETWORK"
         title="Performance intelligence"

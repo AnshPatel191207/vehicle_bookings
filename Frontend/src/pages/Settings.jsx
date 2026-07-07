@@ -89,7 +89,10 @@ export default function Settings() {
 
   return (
     <>
-      <Helmet><title>Account Settings</title></Helmet>
+      <Helmet>
+        <title>Account Settings</title>
+        <meta name="description" content="View and configure your RideOps account preferences, operator identity, notification settings, and security keys." />
+      </Helmet>
       <PageHeader 
         eyebrow="WORKSPACE / PREFERENCES" 
         title="Account settings" 

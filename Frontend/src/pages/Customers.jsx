@@ -1,5 +1,6 @@
 import { useCallback, useEffect, useState } from 'react';
 import { ChevronLeft, ChevronRight, Search, UserRound, UsersRound } from 'lucide-react';
+import { Helmet } from 'react-helmet-async';
 import api, { compact } from '../lib/api';
 import { Empty, ErrorPanel, PageHeader, SkeletonRows } from '../components/UI';
 
@@ -28,6 +29,10 @@ export default function Customers() {
 
   return (
     <>
+      <Helmet>
+        <title>Rider Directory</title>
+        <meta name="description" content="Understand customer activity and identify your most engaged riders in the RideOps rider network directory." />
+      </Helmet>
       <PageHeader 
         eyebrow="NETWORK / CUSTOMERS" 
         title="Rider directory" 

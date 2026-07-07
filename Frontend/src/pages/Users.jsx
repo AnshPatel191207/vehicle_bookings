@@ -154,7 +154,10 @@ export default function Users() {
 
   return (
     <>
-      <Helmet><title>Operator Directory</title></Helmet>
+      <Helmet>
+        <title>Operator Directory</title>
+        <meta name="description" content="Provision operator roles, manage security levels, and audit workspace credentials in the RideOps Operator Directory." />
+      </Helmet>
       <PageHeader 
         eyebrow="ADMIN / ACCESS CONTROL" 
         title="Operator directory" 
