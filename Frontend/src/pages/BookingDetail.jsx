@@ -73,7 +73,10 @@ export default function BookingDetail() {
 
   return (
     <>
-      <Helmet><title>{`Booking ${booking.bookingId}`}</title></Helmet>
+      <Helmet>
+        <title>{`Booking ${booking.bookingId}`}</title>
+        <meta name="description" content={`Detailed audit log and driver metrics review for booking ID ${booking.bookingId} on RideOps.`} />
+      </Helmet>
       
       <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '10px' }}>
         <Link to="/bookings" className="back-link" style={{ margin: 0 }}><ArrowLeft />Back to bookings</Link>

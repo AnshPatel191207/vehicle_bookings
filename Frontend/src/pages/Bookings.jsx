@@ -119,7 +119,10 @@ export default function Bookings() {
 
   return (
     <>
-      <Helmet><title>Booking Control</title></Helmet>
+      <Helmet>
+        <title>Booking Control</title>
+        <meta name="description" content="Browse, search, filter, and sort ride-hailing vehicle bookings with cursor-based pagination and soft-delete recovery." />
+      </Helmet>
       <PageHeader 
         eyebrow="OPERATIONS / BOOKINGS" 
         title={filters.showDeleted === 'true' ? 'Archived Bookings' : 'Booking control'} 

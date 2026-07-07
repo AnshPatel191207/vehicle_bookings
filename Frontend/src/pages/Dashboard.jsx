@@ -59,7 +59,10 @@ export default function Dashboard() {
 
   return (
     <>
-      <Helmet><title>Command Center</title></Helmet>
+      <Helmet>
+        <title>Command Center</title>
+        <meta name="description" content="Real-time KPI monitoring dashboard for RideOps fleet operations, tracking total revenue, active bookings, and success rates." />
+      </Helmet>
       <PageHeader
         eyebrow="LIVE OPERATIONS / TODAY"
         title={`Good ${new Date().getHours() < 12 ? 'morning' : 'afternoon'}, ${user?.name?.split(' ')[0]}.`}

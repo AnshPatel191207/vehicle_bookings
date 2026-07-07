@@ -1,37 +1,37 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://rideops.com/login</loc>
+    <loc>https://vehicle-bookings.vercel.app/login</loc>
     <changefreq>monthly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://rideops.com/register</loc>
+    <loc>https://vehicle-bookings.vercel.app/register</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://rideops.com/forgot-password</loc>
+    <loc>https://vehicle-bookings.vercel.app/forgot-password</loc>
     <changefreq>yearly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://rideops.com/dashboard</loc>
+    <loc>https://vehicle-bookings.vercel.app/dashboard</loc>
     <changefreq>always</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://rideops.com/bookings</loc>
+    <loc>https://vehicle-bookings.vercel.app/bookings</loc>
     <changefreq>always</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://rideops.com/analytics</loc>
+    <loc>https://vehicle-bookings.vercel.app/analytics</loc>
     <changefreq>hourly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://rideops.com/settings</loc>
+    <loc>https://vehicle-bookings.vercel.app/settings</loc>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
